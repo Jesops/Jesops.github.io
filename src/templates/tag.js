@@ -1,7 +1,6 @@
 // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files
 import React from "react"
-import { graphql } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,18 +23,14 @@ class Tag extends React.Component {
               return (
                 <li key={slug}>
                   <h3>
-                    <AniLink fade duration={0.15} to={`/${slug}`}>
-                      {title}
-                    </AniLink>
+                    <Link to={`/${slug}`}>{title}</Link>
                   </h3>
                   <small>{date}</small>
                 </li>
               )
             })}
           </ul>
-          <AniLink fade duration={0.2} to="/tags">
-            All tags
-          </AniLink>
+          <Link to="/tags">All tags</Link>
         </div>
       </Layout>
     )

@@ -1,8 +1,8 @@
 module.exports = {
   title: `Jisop's Devlog`,
   author: `Jisop`,
-  siteUrl: `https://JiSop.github.io/`, // Your blog site url
-  description: `front-end dev log`,
+  siteUrl: `https://jisop.netlify.com/`, // Your blog site url
+  description: `front-end devlog`,
   social: {
     github: `JiSop`, // Your GitHub account
   },

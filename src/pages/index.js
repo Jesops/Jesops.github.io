@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { graphql, Link } from "gatsby"
 
 import { kebabCase } from "lodash"
 import Bio from "../components/bio"
@@ -8,7 +7,6 @@ import SEO from "../components/seo"
 import Layout from "../components/layout"
 
 class Index extends React.Component {
-
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -20,9 +18,7 @@ class Index extends React.Component {
         <SEO title="Home" />
         <Bio />
         <div className="all-tags">
-          <AniLink fade duration={0.2} to="/tags">
-            All tags
-          </AniLink>
+          <Link to="/tags">All tags</Link>
         </div>
         <div className="blog-list">
           {posts.map(({ node }) => {
@@ -32,9 +28,7 @@ class Index extends React.Component {
                 <header>
                   <small>{node.frontmatter.date}</small>
                   <h2>
-                    <AniLink fade duration={0.2} to={`/${node.fields.slug}`}>
-                      {title}
-                    </AniLink>
+                    <Link to={`/${node.fields.slug}`}>{title}</Link>
                   </h2>
                 </header>
                 <section>
@@ -47,9 +41,7 @@ class Index extends React.Component {
                     <ul className="tags">
                       {node.frontmatter.tags.map(tag => (
                         <li key={tag + `tag`}>
-                          <AniLink fade duration={0.15} to={`/tags/${kebabCase(tag)}`}>
-                            #{tag}
-                          </AniLink>
+                          <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
                         </li>
                       ))}
                     </ul>

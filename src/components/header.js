@@ -1,5 +1,5 @@
 import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 import PropTypes from "prop-types"
 
 import Headroom from "react-headroom"
@@ -13,12 +13,10 @@ class Header extends React.Component {
         <Headroom>
           <div className="navbar">
             <h1>
-              <AniLink fade duration={0.15} to="/">
-                {siteTitle}
-              </AniLink>
+              <Link to="/">{siteTitle}</Link>
             </h1>
             <div className="nav-side">
-              <h1></h1>
+              <div></div>
               {/* <h1>DayLog</h1> */}
               {/* <h1>Resume</h1> */}
               <ThemeToggler>

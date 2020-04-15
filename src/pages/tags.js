@@ -1,9 +1,8 @@
 // https://www.gatsbyjs.org/docs/adding-tags-and-categories-to-blog-posts/#add-tags-to-your-markdown-files
 
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { kebabCase } from "lodash"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -19,13 +18,9 @@ const Tags = ({ data }) => {
         <ul>
           {allTags.map(tag => (
             <li key={tag.fieldValue}>
-              <AniLink
-                fade
-                duration={0.15}
-                to={`/tags/${kebabCase(tag.fieldValue)}`}
-              >
+              <Link to={`/tags/${kebabCase(tag.fieldValue)}`}>
                 {tag.fieldValue} ({tag.totalCount})
-              </AniLink>
+              </Link>
             </li>
           ))}
         </ul>

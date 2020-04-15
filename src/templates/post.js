@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { kebabCase } from "lodash"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -21,17 +20,13 @@ class Post extends React.Component {
         />
         <article className="post">
           <header>
-            <h1>
-              {post.frontmatter.title}
-            </h1>
+            <h1>{post.frontmatter.title}</h1>
             <p className="date">{post.frontmatter.date}</p>
             {post.frontmatter.tags ? (
               <ul className="tags">
                 {post.frontmatter.tags.map(tag => (
                   <li key={tag + `tag`}>
-                    <AniLink fade duration={0.15} to={`/tags/${kebabCase(tag)}`}>
-                      #{tag}
-                    </AniLink>
+                    <Link to={`/tags/${kebabCase(tag)}`}>#{tag}</Link>
                   </li>
                 ))}
               </ul>

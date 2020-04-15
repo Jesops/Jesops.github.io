@@ -137,7 +137,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: metaConfig.title,
-        short_name: `sop devlog`,
+        short_name: metaConfig.title,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#8c61ff`,

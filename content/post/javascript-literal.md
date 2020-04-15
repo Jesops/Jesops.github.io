@@ -53,7 +53,7 @@ undefined // undefined literal
 리터럴 표현식이 평가되어 값이 될 수 있지만 값이 리터럴은 아니다.  
 값은 값이고 리터럴은 리터럴이다.
 
-![tibetFox](tibetFox.jpeg)  
+![tibetFox](../img/tibetFox.jpeg)  
 
 ## 리터럴(literal)과 변수(variable)
 
