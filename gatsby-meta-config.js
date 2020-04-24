@@ -8,5 +8,5 @@ module.exports = {
   },
   icon: `src/assets/icon.png`, // Add your favicon
   keywords: [`blog`],
-  ga: "UA-163574982-1", // Add your google analytics tranking ID
+  ga: `UA-163574982-1`, // Add your google analytics tranking ID
 }
